@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" xmlns:v-model="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml"
+      xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>错题回顾</title>
+    <link rel="stylesheet" href="css/test.css" />
+    <link href="other/dist/css/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div id="PUB" class="PUB">
+    <a class="btn btn-outline-primary" style="   position: absolute;left: 1400px;top: 18px; width: 100px" href="main.html">返 回</a>
+    <span style="margin-left: -74px">题干：</span>
+    <p class="timu">{{cnt+1}}、{{new_data.title.title_name}}</p>
+    <p class="se">请选择你的答案：</p>
+    <div style="width: 700px;" class="Da">
+        <div class="res" v-for="(item, index) in new_data.resultsArrayList">
+            <input ref="inputs" type="radio"  v-on:click="judgeAndCalculate(item.is_correct,index)"  name="res">
+            <label>{{Options(index)}} : {{item.results_name}}</label>
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <button type="button" class="btn btn-default on" v-on:click="TitleOn"> 上 一 题</button>
+        <button type="button" class="btn btn-default under" v-on:click="TitleUnder">下 一 题</button>
+    </div>
+    <div style="text-align: center;">
+        <button type="button" class="btn btn-default submit"  v-on:click="Submit" style="width: 300px">交 卷</button>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/axios.min.js"></script>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/test.js"></script>
+</html>

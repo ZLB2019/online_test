@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>登 陆</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+    <!-- Bootstrap core CSS -->
+<link href="other/dist/css/bootstrap.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/login.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+   <div class="form-signin" id="login_con">
+  <img class="mb-4" src="image/图标.png" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">请 登 录</h1>
+  <label for="inputEmail" class="sr-only">Email address</label>
+  <input type="text" name="user_id" v-model="user_id" id="inputEmail" class="form-control" placeholder="账号"  autofocus>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" name="user_password"v-model="user_password" id="inputPassword" class="form-control" placeholder="密码" required>
+  <button class="btn btn-lg btn-primary btn-block" type="botton" v-on:click="InputJudge">登录</button>
+  <p class="mt-5 mb-3 text-muted">&copy; 2017-2020</p>
+</div>
+</body>
+  <script type="text/javascript" src="js/axios.min.js"></script>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>
+</html>

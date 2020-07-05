@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Z在线考试</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/pricing/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="other/dist/css/bootstrap.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/pricing.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="title_top" class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">ZLB</h5>
+      <img src="image/图标.png" class="img_con">
+      <p id="user_name_show" v-bind:style="user_name_css">用户名：<span>{{user_name}}</span></p>
+      <a class="btn btn-outline-primary" style="margin-right: 30px"  href="login.html">{{type}}</a>
+      <a class="btn btn-outline-primary" style="margin-right: 50px" href="#">注册</a>
+</div>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Z在线模拟考试</h1>
+  <p class="lead">通过这个在线模拟考试系统，你能更好地模拟每一次考试，它将记录你的每次考试成绩，并计算平均成绩，让你的对你的水平的了解将会更加直观，而且我们拥有错题库，会记录下你做错的题，方便你更好地查漏补缺！</p>
+</div>
+
+<div class="container"  id="PUB">
+  <div class="card-deck mb-3 text-center">
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">功能一</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">错题库 </h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>你的错题都在这里~</li>
+          <li>答对了的题会自动移除错题库~</li>
+          <li>祝你考试顺利~</li>
+          <li>努力的人总不会差！</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary" v-on:click="WrongTitle">进 入</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">功能二</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">模拟考试</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>你可以在这里进行模拟考试~</li>
+          <li>我们会随机抽取10题进行出题~</li>
+          <li>祝你考试顺利~</li>
+          <li>努力的人总不会差！</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary" v-on:click="SimulationTest">进 入</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">功能三</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">历史成绩</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>在这里你可以查看你的历史成绩哦</li>
+          <li>还会计算出你的平均成绩~</li>
+          <li>祝你考试顺利~</li>
+          <li>努力的人总不会差！</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary" v-on:click="TestResults" >进 入</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+  <script type="text/javascript" src="js/axios.min.js"></script>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>
